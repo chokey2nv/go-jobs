@@ -17,4 +17,5 @@ type Store interface {
 	Update(ctx context.Context, job *types.Job) error
 	Get(ctx context.Context, id string) (*types.Job, error)
 	List(ctx context.Context, f Filter) ([]*types.Job, error)
+	Remove(ctx context.Context, id string) (string, error)
 }

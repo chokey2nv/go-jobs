@@ -42,6 +42,12 @@ func (m *MemoryStore) Get(ctx context.Context, id string) (*types.Job, error) {
 	}
 	return clone(j), nil
 }
+func (m *MemoryStore) Remove(ctx context.Context, id string) (string, error) {
+	m.mu.RLock()
+	defer m.mu.RUnlock()
+	delete(m.jobs, id)
+	return id, nil
+}
 
 func (m *MemoryStore) List(ctx context.Context, f Filter) ([]*types.Job, error) {
 	m.mu.RLock()

@@ -158,6 +158,11 @@ func (s *JobService) Get(ctx context.Context, id string) (*types.Job, error) {
 	return s.store.Get(ctx, id)
 }
 
+// Remove a job by ID
+func (s *JobService) Remove(ctx context.Context, id string) (string, error) {
+	return s.store.Remove(ctx, id)
+}
+
 // List retrieves jobs by filter.
 func (s *JobService) List(ctx context.Context, f stores.Filter) ([]*types.Job, error) {
 	return s.store.List(ctx, f)
