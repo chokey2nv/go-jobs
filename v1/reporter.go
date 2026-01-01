@@ -28,6 +28,6 @@ func (r *progressReporter) Progress(p int, msg string) {
 	}
 	r.job.Progress = p
 	r.job.Message = msg
-	r.job.UpdatedAt = time.Now()
+	r.job.UpdatedAt = time.Now().Format(time.RFC3339)
 	_ = r.store.Update(context.Background(), r.job)
 }

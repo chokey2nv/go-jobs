@@ -13,7 +13,7 @@ import (
 
 // NewJob creates a new job instance with default Pending status.
 func NewJob(name string) *types.Job {
-	now := time.Now()
+	now := time.Now().Format(time.RFC3339)
 	return &types.Job{
 		ID:        uuid.NewString(),
 		Type:      name,
@@ -135,7 +135,7 @@ func (s *JobService) run(
 		job.Progress = 100
 	}
 
-	job.UpdatedAt = time.Now()
+	job.UpdatedAt = time.Now().Format(time.RFC3339)
 	_ = s.store.Update(context.Background(), job)
 }
 
