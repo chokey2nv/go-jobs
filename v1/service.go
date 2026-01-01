@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/chokey2nv/go-jobs/job/stores"
-	"github.com/chokey2nv/go-jobs/job/types"
+	"github.com/chokey2nv/go-jobs/v1/stores"
+	"github.com/chokey2nv/go-jobs/v1/types"
 	"github.com/google/uuid"
 )
 

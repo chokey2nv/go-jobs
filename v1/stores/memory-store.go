@@ -5,7 +5,7 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/chokey2nv/go-jobs/job/types"
+	"github.com/chokey2nv/go-jobs/v1/types"
 )
 
 type MemoryStore struct {

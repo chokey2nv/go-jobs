@@ -3,7 +3,7 @@ package stores
 import (
 	"context"
 
-	"github.com/chokey2nv/go-jobs/job/types"
+	"github.com/chokey2nv/go-jobs/v1/types"
 )
 
 type Filter struct {

@@ -5,7 +5,7 @@ import (
 	"errors"
 	"sync"
 
-	types "github.com/chokey2nv/go-jobs/job/types"
+	types "github.com/chokey2nv/go-jobs/v1/types"
 )
 
 // WorkerPool implements a fixed-size pool of goroutines
